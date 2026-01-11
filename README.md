@@ -10,9 +10,7 @@ dataset.py: Handles DIV2K data loading and QIS noise simulation (Poisson + Read 
 
 train.py: The training pipeline with Mean Squared Error (MSE) loss.
 
-test.py: Main execution script. Handles single-image inference, multi-level stress testing (1.0, 3.0, 5.0, and 7.0 PPP), and quantitative evaluation.
-
-plot_results.py: Generates scientific PSNR performance graphs from CSV data.
+test.py: Main execution script. Handles single-image inference, multi-level stress testing (1.0, 3.0, 5.0, and 7.0 PPP), and quantitative evaluation.and Generates scientific PSNR performance graphs from CSV data.
 
 /checkpoints: Stores the trained weights (qis_master.pth).
 
