@@ -1,19 +1,24 @@
 # Single-Photon Detector (SPD) Image Restoration
 
-This project implements a **Residual U-Net** designed to restore images from a Quanta Image Sensor (QIS) environment. It specializes in denoising images at ultra-low light levels (0.1 to 5.0 Photons Per Pixel).
+Single-Photon Detector (SPD) Image Restoration
+This project implements a Residual U-Net designed to restore images from a Quanta Image Sensor (QIS) environment. It specializes in denoising images at ultra-low light levels (0.1 to 5.0 Photons Per Pixel).
 
 📁 Project Structure
-
 model.py: The Residual U-Net architecture featuring Gain Conditioning.
+
 dataset.py: Handles DIV2K data loading and QIS noise simulation (Poisson + Read Noise).
+
 train.py: The training pipeline with Mean Squared Error (MSE) loss.
-stress_test.py: Evaluates the model across 1.0, 3.0, 5.0, and 7.0 PPP levels.
+
+test.py: Main execution script. Handles single-image inference, multi-level stress testing (1.0, 3.0, 5.0, and 7.0 PPP), and quantitative evaluation.
+
 plot_results.py: Generates scientific PSNR performance graphs from CSV data.
-inference.py: Quick script for running a single image through the model.
+
 /checkpoints: Stores the trained weights (qis_master.pth).
-/results: Stores all evaluation PNGs, grids, and evaluation_results.csv.
+
+/results: Stores all evaluation PNGs, comparison grids, and evaluation_results.csv.
+
 /images: Directory for your test input images.
-/div2k_data & /DIV2K_train_HR: Training and validation datasets.
 
 ## 🚀 How to Runwo`
 
